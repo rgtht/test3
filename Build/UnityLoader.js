@@ -1068,7 +1068,7 @@ var UnityLoader = UnityLoader || {
                                     n.fillBitWindow(), g += n.val_ >>> n.bit_pos_ & 15,
                                         n.bit_pos_ += m[g].bits, b = m[g].value, h[y] = b, 0 !== b && (p -= 32 >> b, ++w)
                                 }
-                                if (1 a !== w && 0 !== p) throw new Error("[ReadHuffmanCode] invalid num_codes or space");
+                                if (1 !== w && 0 !== p) throw new Error("[ReadHuffmanCode] invalid num_codes or space");
                                 d(h, e, i, n)
                             }
                             if (a = L(t, r, D, i, e), 0 === a) throw new Error("[ReadHuffmanCode] BuildHuffmanTable failed: ");
@@ -2039,7 +2039,7 @@ var UnityLoader = UnityLoader || {
         }
     }(),
     compatibilityCheck: function(e, t, r) {
-        t();
+      t();
     },
     Blobs: {},
     loadCode: function(e, t, r) {
