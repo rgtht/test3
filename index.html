@@ -10,20 +10,16 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
-     window.addEventListener("resize",onResize);
-      
-      function onResize()
-      {
-        gameInstance.SendMessage("DebugTest","SetWidth",window.innerWidth);
-        gameInstance.SendMessage("DebugTest","SetHeight",window.innerHeight);
-        gameInstance.SendMessage("DebugTest","OnResize");
-      }
-      
     </script>
   </head>
-  
-  <body style = "margin:0; overflow:hidden;">
-    <div id="gameContainer"></div> 
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">New Unity Project (2)</div>
+      </div>
+    </div>
   </body>
-  
 </html>
